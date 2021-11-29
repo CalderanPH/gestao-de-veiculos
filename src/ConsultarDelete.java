@@ -10,9 +10,9 @@ public class ConsultarDelete {
     private JTextField ctVelocMax;
     private JTextField ctPistoes;
     private JTextField ctPotencia;
-    private JButton button1;
-    private JButton button2;
-    private JButton button3;
+    private JButton btConsultar;
+    private JButton btExcluir;
+    private JButton btSair;
     private JLabel lblPlaca;
     private JLabel lblPassageiros;
     private JLabel lblMarca;
