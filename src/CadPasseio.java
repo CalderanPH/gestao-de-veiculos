@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CadPasseio {
+public class CadPasseio extends javax.swing.JFrame {
     private JButton btCadastrar;
     private JButton btLimpar;
     private JButton btNovo;
@@ -25,14 +25,66 @@ public class CadPasseio {
     private JLabel lblVelocMax;
     private JLabel lblPistoes;
     private JLabel lblPotencia;
+    private JPanel painel;
 
     public CadPasseio() {
-
         btCadastrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+
             }
         });
+
+        btLimpar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                limpar();
+            }
+        });
+
+        btNovo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        btSair.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sair();
+            }
+        });
+    }
+
+    public void limpar(){
+        ctPassageiros.setText("");
+        ctPlaca.setText("");
+        ctMarca.setText("");
+        ctModelo.setText("");
+        ctCor.setText("");
+        ctRodas.setText("");
+        ctVelocMax.setText("");
+        ctVelocMax.setText("");
+        ctPistoes.setText("");
+        ctPotencia.setText("");
+        ctPassageiros.requestFocus();
+    }
+
+
+    public void sair(){
+        int resp = JOptionPane.showConfirmDialog(null, "Deseja sair?", "Sair", JOptionPane.YES_NO_CANCEL_OPTION);
+        if (resp == 0){
+            this.dispose();
+        }
+        limpar();
+    }
+
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("CadPasseio");
+        frame.setContentPane(new CadPasseio().painel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }
