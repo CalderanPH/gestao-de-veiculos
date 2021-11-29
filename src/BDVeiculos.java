@@ -72,21 +72,6 @@ public class BDVeiculos {
 
 
     public Passeio cadPasseio (Passeio passeio) throws VeicExistException {
-        System.out.println("Cadastro de Veículos de Passeio");
-        passeio.setModelo(l.entDados("Informe o Modelo do Veiculo...: "));
-        passeio.setCor(l.entDados("Informe a cor do Veículo...: "));
-        passeio.setMarca(l.entDados("Informe a Marca do Veiculo...: "));
-        passeio.setQtdPassageiros(Integer.parseInt(l.entDados("Informe a quantidade de Passageiros...:")));
-        passeio.setQtdRodas(Integer.parseInt(l.entDados("Informe a quantidade de rodas...:")));
-        passeio.setPlaca(l.entDados("Informe a Placa do Veículo...: "));
-        passeio.getMotor().setQtdPist(Integer.parseInt(l.entDados("Informe a quantidade de pistões...: ")));
-        passeio.getMotor().setPontencia(Integer.parseInt(l.entDados("Informe a potencia do veículo...: ")));
-        try{
-            passeio.setVelocMax(Integer.parseInt(l.entDados("Informe a velocidade máxima...:")));
-        } catch (VelocException v){
-            System.out.println(v.erroVeloc());
-        }
-
         if (consPasseio(passeio) == null){
             listaPasseio.add(passeio);
              return passeio;
