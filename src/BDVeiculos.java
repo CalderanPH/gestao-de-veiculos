@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class BDVeiculos {
 
     private List<Passeio> listaPasseio = new ArrayList<Passeio>();
     private List<Carga>  listaCarga = new ArrayList<Carga>();
+
 
 
     private Passeio passeio = new Passeio();
@@ -146,6 +148,11 @@ public class BDVeiculos {
         System.out.println("Quantidade total de Letras...: "+ carga.calcular());
         passeio.calcVel();
     }
+
+
+
+
+
 
 
 
