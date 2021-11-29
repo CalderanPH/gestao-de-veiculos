@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CadPasseio {
@@ -10,17 +11,28 @@ public class CadPasseio {
     private JTextField ctPlaca;
     private JTextField ctMarca;
     private JTextField ctModelo;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
-    private JTextField textField9;
+    private JTextField ctCor;
+    private JTextField ctRodas;
+    private JTextField ctVelocMax;
+    private JTextField ctPistoes;
+    private JTextField ctPotencia;
     private JLabel lblPassageiros;
     private JLabel lblPlaca;
     private JLabel lblMarca;
     private JLabel lblModelo;
+    private JLabel lblCor;
+    private JLabel lblRodas;
+    private JLabel lblVelocMax;
+    private JLabel lblPistoes;
+    private JLabel lblPotencia;
 
     public CadPasseio() {
 
+        btCadastrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        });
     }
 }

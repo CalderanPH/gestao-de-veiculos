@@ -71,40 +71,40 @@
           <text value="Sair"/>
         </properties>
       </component>
-      <component id="8df76" class="javax.swing.JLabel">
+      <component id="8df76" class="javax.swing.JLabel" binding="lblPistoes">
         <constraints>
           <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Qtd. Pistões"/>
         </properties>
       </component>
-      <component id="2bf9c" class="javax.swing.JLabel">
+      <component id="2bf9c" class="javax.swing.JLabel" binding="lblVelocMax">
         <constraints>
           <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Velocidade Máxima"/>
         </properties>
       </component>
-      <component id="e4b26" class="javax.swing.JLabel">
+      <component id="e4b26" class="javax.swing.JLabel" binding="lblRodas">
         <constraints>
           <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Qtd. Rodas"/>
         </properties>
       </component>
-      <component id="f8c61" class="javax.swing.JLabel">
+      <component id="f8c61" class="javax.swing.JLabel" binding="lblCor">
         <constraints>
           <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Cor"/>
         </properties>
       </component>
       <component id="93f13" class="javax.swing.JLabel" binding="lblModelo">
@@ -179,7 +179,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="1d153" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+      <component id="1d153" class="javax.swing.JTextField" binding="ctCor">
         <constraints>
           <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -188,7 +188,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="2f915" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+      <component id="2f915" class="javax.swing.JTextField" binding="ctRodas">
         <constraints>
           <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -197,7 +197,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="65570" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+      <component id="65570" class="javax.swing.JTextField" binding="ctVelocMax">
         <constraints>
           <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -206,25 +206,27 @@
         </constraints>
         <properties/>
       </component>
-      <component id="bd528" class="javax.swing.JTextField" binding="textField8" default-binding="true">
+      <component id="bd528" class="javax.swing.JTextField" binding="ctPistoes">
         <constraints>
           <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
           <forms defaultalign-horz="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
-      <component id="dae57" class="javax.swing.JLabel">
+      <component id="dae57" class="javax.swing.JLabel" binding="lblPotencia">
         <constraints>
           <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Potência"/>
         </properties>
       </component>
-      <component id="3db43" class="javax.swing.JTextField" binding="textField9" default-binding="true">
+      <component id="3db43" class="javax.swing.JTextField" binding="ctPotencia">
         <constraints>
           <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
