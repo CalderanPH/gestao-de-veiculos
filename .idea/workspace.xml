@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2d979d94-0774-4ff7-8a74-4d521a8729e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CadPasseio.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CadPasseio.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CadPasseio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CadPasseio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ConsultarDelete.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsultarDelete.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ConsultarDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsultarDelete.java" afterDir="false" />
     </list>
@@ -50,9 +52,16 @@
       <recent name="C:\Users\paulo\IdeaProjects\Atividade 4\src\Pacote" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CadPasseio">
+  <component name="RunManager" selected="Application.ConsultarDelete">
     <configuration name="CadPasseio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CadPasseio" />
+      <module name="Atividade1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsultarDelete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ConsultarDelete" />
       <module name="Atividade1" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -74,6 +83,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConsultarDelete" />
         <item itemvalue="Application.CadPasseio" />
         <item itemvalue="Application.Teste" />
         <item itemvalue="Application.Main" />

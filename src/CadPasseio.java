@@ -107,9 +107,12 @@ public class CadPasseio extends javax.swing.JFrame {
             passeio = bdVeiculos.cadPasseio(passeio);
             if(passeio != null){
                 JOptionPane.showMessageDialog(null, "Passeio cadastrado com sucesso! ", "Cadastro ok", 1);
+                limpar();
             }
             else {
                 JOptionPane.showMessageDialog(null, "Já existe um veículo com está placa! ", "Cadastro não realizado", 0);
+                ctPlaca.setText("");
+                ctPlaca.requestFocus();
             }
         }catch (NumberFormatException nfe){
             JOptionPane.showMessageDialog(null, "A quantidade de passageiros deve ser Inteiro! ", "Erro Passageiros", JOptionPane.ERROR_MESSAGE);
