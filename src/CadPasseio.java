@@ -128,8 +128,8 @@ public class CadPasseio extends javax.swing.JFrame {
 
 
     public static void main(String[] args) {
-            JFrame frame = new CadPasseio("Cadastro Veículos de Passeio");
-            frame.setVisible(true);
+            JFrame jan1 = new CadPasseio("Cadastro Veículos de Passeio");
+            jan1.setVisible(true);
     }
 
 

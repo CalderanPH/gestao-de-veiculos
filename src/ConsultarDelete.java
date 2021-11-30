@@ -42,7 +42,7 @@ public class ConsultarDelete extends javax.swing.JFrame {
         btConsultar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+            consultarPlaca();
             }
         });
         btExcluir.addActionListener(new ActionListener() {
@@ -62,25 +62,27 @@ public class ConsultarDelete extends javax.swing.JFrame {
     public void consultarPlaca(){
         passeio = new Passeio();
         try {
-            passeio.setPlaca(ctPlaca.getText());
+            passeio.setPlaca(String.valueOf(ctPlaca.getText()));
 
             passeio = bdVeiculos.consPasseio(passeio);
 
             if(passeio != null){
-                ctPassageiros.setText(Integer.parseInt(passeio.getQtdPassageiros()));
+                ctPassageiros.setText(String.valueOf(passeio.getQtdPassageiros()));
                 ctMarca.setText(passeio.getMarca());
                 ctModelo.setText(passeio.getModelo());
                 ctCor.setText(passeio.getCor());
-                ctRodas.setText(passeio.getQtdRodas());
-                ctVelocMax.setText(passeio.getVelocMax());
-                ctVelocMax.setText(passeio.getVelocMax());
-                ctPistoes.setText(passeio.getMotor().getQtdPist());
-                ctPotencia.setText(passeio.getMotor().getPontencia());
+                ctRodas.setText(String.valueOf(passeio.getQtdRodas()));
+                ctVelocMax.setText(String.valueOf(passeio.getVelocMax()));
+                ctVelocMax.setText(String.valueOf(passeio.getVelocMax()));
+                ctPistoes.setText(String.valueOf(passeio.getMotor().getQtdPist()));
+                ctPotencia.setText(String.valueOf(passeio.getMotor().getPontencia()));
                 JOptionPane.showMessageDialog(null, "Veículo consultado com sucesso ", "Consulta ok", 1);
                 limpar();
             }
             else {
                 JOptionPane.showMessageDialog(null, "Placa não encontrada! ", "Veículo não localizado", 0);
+                ctPlaca.setText("");
+                ctPlaca.requestFocus();
             }
         }catch (NumberFormatException nfe){
             JOptionPane.showMessageDialog(null, "A quantidade de passageiros deve ser Inteiro! ", "Erro Passageiros", JOptionPane.ERROR_MESSAGE);

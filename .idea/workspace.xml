@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d979d94-0774-4ff7-8a74-4d521a8729e3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/GestãoMain.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GestãoMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CadPasseio.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CadPasseio.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/CadPasseio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/CadPasseio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CadPasseio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CadPasseio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConsultarDelete.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsultarDelete.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ConsultarDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsultarDelete.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
