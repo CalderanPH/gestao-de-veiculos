@@ -114,8 +114,9 @@ public class ConsultarDelete extends javax.swing.JFrame {
 
 
     public static void main(String[] args) {
-        JFrame frame = new ConsultarDelete("Consulta/Delete Veículos de Passeio");
-        frame.setVisible(true);
+        JFrame jan1 = new ConsultarDelete("Consulta/Delete Veículos de Passeio");
+        jan1.setSize(450,400);
+        jan1.setVisible(true);
     }
 
 }

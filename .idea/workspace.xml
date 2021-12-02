@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d979d94-0774-4ff7-8a74-4d521a8729e3" name="Changes" comment="" />
+    <list default="true" id="2d979d94-0774-4ff7-8a74-4d521a8729e3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/GestaoMain.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GestaoMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VeiculosPasseio.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VeiculosPasseio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/CadPasseio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/CadPasseio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/ConsultarDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/ConsultarDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/GestãoMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CadPasseio.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CadPasseio.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CadPasseio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CadPasseio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsultarDelete.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsultarDelete.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsultarDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsultarDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestãoMain.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestãoMain.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +62,7 @@
       <recent name="C:\Users\paulo\IdeaProjects\Atividade 4\src\Pacote" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ConsultarDelete">
+  <component name="RunManager" selected="Application.GestaoMain">
     <configuration name="CadPasseio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CadPasseio" />
       <module name="Atividade1" />
@@ -61,15 +77,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="GestaoMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GestaoMain" />
       <module name="Atividade1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Teste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Teste" />
+    <configuration name="GestãoMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GestãoMain" />
+      <module name="Atividade1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VeiculosPasseio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VeiculosPasseio" />
       <module name="Atividade1" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -77,10 +100,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConsultarDelete" />
+        <item itemvalue="Application.GestaoMain" />
+        <item itemvalue="Application.VeiculosPasseio" />
+        <item itemvalue="Application.GestãoMain" />
         <item itemvalue="Application.CadPasseio" />
-        <item itemvalue="Application.Teste" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ConsultarDelete" />
       </list>
     </recent_temporary>
   </component>
