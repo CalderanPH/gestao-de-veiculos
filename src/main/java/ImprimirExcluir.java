@@ -2,46 +2,37 @@ package main.java;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 
-public class ImprimirExcluir extends javax.swing.JFrame{
+public class ImprimirExcluir extends JFrame {
     private JPanel painel;
     private JTable table1;
     private JScrollPane scrollPane1;
     private JButton btImprimir;
     private JButton btExcluir;
     private JButton btSair;
+    private JList list1;
+    private JComboBox cbBox;
 
     private Passeio passeio = new Passeio();
     private BDVeiculos bdVeiculos = new BDVeiculos();
 
     String header[] = {"Placa", "Marca", "Modelo", "Cor", "Qtd. Rodas", "Velocidade Máxima", "Qtd. Pistão", "Potência", "Qtd. Passageiros"};
 
-    private void createUIComponents() {
-         DefaultTableModel modelo = new DefaultTableModel(0,9);
-         modelo.setColumnIdentifiers(header);
-         modelo.setRowCount(0);
-         int posLin = 0;
-
-         for (Passeio passeio : bdVeiculos.getListaPasseio()) {
-             modelo.insertRow(posLin, new Object[]{passeio.getPlaca(), passeio.getMarca(), passeio.getModelo(), passeio.getCor(), passeio.getQtdRodas(), passeio.getVelocMax(), passeio.getMotor().getQtdPist(), passeio.getMotor().getPontencia(), passeio.getQtdPassageiros()});
-             posLin++;
-         }
-    }
-
 
     public ImprimirExcluir(String title) {
         super(title);
 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(painel);
         this.pack();
 
         btImprimir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                createUIComponents();
+                imprimir();
             }
         });
         btExcluir.addActionListener(new ActionListener() {
@@ -56,57 +47,185 @@ public class ImprimirExcluir extends javax.swing.JFrame{
                 sair();
             }
         });
+        table1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                selectTab();
+            }
+        });
+        cbBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                preencherCombo();
+                selectCombo();
+            }
+        });
+        list1.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                preencherLista();
+                selectLista();
+            }
+        });
     }
 
 
-
-    public void sair(){
+    public void sair() {
         int resp = JOptionPane.showConfirmDialog(null, "Deseja sair?", "Sair", JOptionPane.YES_NO_CANCEL_OPTION);
-        if (resp == 0){
+        if (resp == 0) {
             this.dispose();
         }
     }
 
 
+    //selecionar o item da tabela ao clicar na linha
+    public void selectTab() {
+        String valLinTab = "";
+        int posLin = table1.getSelectedRow();
 
-    public void imprimir(){
-        passeio = new Passeio();
-        try {
-            passeio.getModelo(ctModelo.getText());
-            passeio.setCor(ctCor.getText());
-            passeio.setMarca(ctCor.getText());
-            passeio.setQtdPassageiros(Integer.parseInt(ctPassageiros.getText()));
-            passeio.setQtdRodas(Integer.parseInt(ctRodas.getText()));
-            passeio.setPlaca(ctPlaca.getText());
-            passeio.getMotor().setQtdPist(Integer.parseInt(ctPistoes.getText()));
-            passeio.getMotor().setPontencia(Integer.parseInt(ctPotencia.getText()));
-            passeio.setVelocMax(Integer.parseInt(ctVelocMax.getText()));
+        for (int coluna = 0; coluna < table1.getColumnCount(); coluna++) {
+            valLinTab += table1.getModel().getValueAt(posLin, coluna).toString();
 
-            passeio = bdVeiculos.cadPasseio(passeio);
-            if(passeio != null){
-                JOptionPane.showMessageDialog(null, "Passeio cadastrado com sucesso! ", "Cadastro ok", 1);
-                limpar();
+            if (coluna + 1 < table1.getColumnCount()) {
+                valLinTab += " - ";
             }
-            else {
-                JOptionPane.showMessageDialog(null, "Já existe um veículo com está placa! ", "Cadastro não realizado", 0);
-                ctPlaca.setText("");
-                ctPlaca.requestFocus();
-            }
-        }catch (NumberFormatException nfe){
-            JOptionPane.showMessageDialog(null, "A quantidade de passageiros deve ser Inteiro! ", "Erro Passageiros", JOptionPane.ERROR_MESSAGE);
-            limpar();
-        }catch (NullPointerException n){
-            JOptionPane.showMessageDialog(null, "Erro inesperado tente novamente! ", "Erro", JOptionPane.ERROR_MESSAGE);
-        }catch (VeicExistException vee) {
-            JOptionPane.showMessageDialog(null, vee.erroVeiculo(), "Erro", JOptionPane.ERROR_MESSAGE);
-        }catch (VelocException v){
-            JOptionPane.showMessageDialog(null, v.erroVeloc(), "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+        JOptionPane.showMessageDialog(null, "Os valores da linha " + posLin + "è: " + valLinTab, "Seleção de Tabela", 1);
+    }
+
+
+    public void preencherLista() {
+        DefaultListModel modLista = new DefaultListModel();
+
+        for (Passeio passeio : bdVeiculos.getListaPasseio()) {
+            modLista.addElement(passeio.getPlaca() + "-" + passeio.getModelo() + "-" + passeio.getMarca() + "-" + passeio.getCor() + "-" + passeio.getQtdPassageiros() + "-" + passeio.getVelocMax() + "-" + passeio.getQtdRodas() + "-" + passeio.getMotor().getPontencia() + "-" + passeio.getMotor().getQtdPist());
+        }
+        list1.setModel(modLista);
+    }
+
+    public void selectLista() {
+        String valLinList = "";
+        int posLin = list1.getSelectedIndex();
+        valLinList = list1.getSelectedValue().toString();
+
+        JOptionPane.showMessageDialog(null, "Os valores da linha " + posLin + "è: " + valLinList, "Seleção de Tabela", 1);
+    }
+
+    public void preencherCombo() {
+        cbBox.removeAllItems();
+        cbBox.addItem("Escolha uma opção");
+
+        for (Passeio passeio : bdVeiculos.getListaPasseio()) {
+            cbBox.addItem(passeio.getPlaca() + "-" + passeio.getModelo() + "-" + passeio.getMarca() + "-" + passeio.getCor() + "-" + passeio.getQtdPassageiros() + "-" + passeio.getVelocMax() + "-" + passeio.getQtdRodas() + "-" + passeio.getMotor().getPontencia() + "-" + passeio.getMotor().getQtdPist());
         }
     }
 
-    public static void main(String[] args) {
-        JFrame jan6 = new ImprimirExcluir("Cadastro Veículos de Passeio");
-        jan6.setSize(600,600);
-        jan6.setVisible(true);
+    public void selectCombo() {
+        int posLin = cbBox.getSelectedIndex();
+        if (cbBox.getSelectedIndex() >= 1) {
+            String valLinComb = cbBox.getSelectedItem().toString();
+            JOptionPane.showMessageDialog(null, "Os valores da linha " + posLin + "è: " + valLinComb, "Seleção de ComboBox", 1);
+        }
     }
+
+    public void imprimir() {
+        DefaultTableModel modelo = (DefaultTableModel) table1.getModel();
+        int poslin = 0;
+        modelo.setRowCount(poslin);
+
+
+        for (Passeio passeio : bdVeiculos.getListaPasseio()) {
+            modelo.insertRow(poslin, new Object[]{passeio.getPlaca(), passeio.getMarca(), passeio.getModelo(), passeio.getCor(), passeio.getQtdRodas(), passeio.getVelocMax(), passeio.getMotor().getQtdPist(), passeio.getMotor().getPontencia(), passeio.getQtdPassageiros()});
+            poslin++;
+        }
+    }
+
+    {
+// GUI initializer generated by IntelliJ IDEA GUI Designer
+// >>> IMPORTANT!! <<<
+// DO NOT EDIT OR ADD ANY CODE HERE!
+        $$$setupUI$$$();
+    }
+
+    /**
+     * Method generated by IntelliJ IDEA GUI Designer
+     * >>> IMPORTANT!! <<<
+     * DO NOT edit this method OR call it in your code!
+     *
+     * @noinspection ALL
+     */
+    private void $$$setupUI$$$() {
+        painel = new JPanel();
+        painel.setLayout(new GridBagLayout());
+        painel.setAlignmentX(1.0f);
+        painel.setAlignmentY(1.0f);
+        painel.setBackground(new Color(-13684945));
+        painel.putClientProperty("html.disable", Boolean.FALSE);
+        scrollPane1 = new JScrollPane();
+        scrollPane1.setBackground(new Color(-13684945));
+        scrollPane1.setForeground(new Color(-1));
+        GridBagConstraints gbc;
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
+        gbc.fill = GridBagConstraints.BOTH;
+        painel.add(scrollPane1, gbc);
+        table1 = new JTable();
+        table1.setAutoResizeMode(4);
+        table1.setDropMode(DropMode.INSERT_ROWS);
+        scrollPane1.setViewportView(table1);
+        btImprimir = new JButton();
+        btImprimir.setForeground(new Color(-16382458));
+        btImprimir.setText("Imprimir todos");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.weightx = 1.0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        painel.add(btImprimir, gbc);
+        btSair = new JButton();
+        btSair.setForeground(new Color(-16382458));
+        btSair.setText("Sair");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 2;
+        gbc.gridy = 3;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        painel.add(btSair, gbc);
+        btExcluir = new JButton();
+        btExcluir.setForeground(new Color(-16382458));
+        btExcluir.setText("Excluir todos");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 3;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        painel.add(btExcluir, gbc);
+        list1 = new JList();
+        final DefaultListModel defaultListModel1 = new DefaultListModel();
+        defaultListModel1.addElement("Lista de Veículos cadastrado no sistema.");
+        list1.setModel(defaultListModel1);
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.weightx = 1.0;
+        gbc.fill = GridBagConstraints.BOTH;
+        painel.add(list1, gbc);
+        cbBox = new JComboBox();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.weightx = 1.0;
+        gbc.anchor = GridBagConstraints.WEST;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        painel.add(cbBox, gbc);
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    public JComponent $$$getRootComponent$$$() {
+        return painel;
+    }
+
 }

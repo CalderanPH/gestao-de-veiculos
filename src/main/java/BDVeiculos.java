@@ -42,10 +42,6 @@ public class BDVeiculos {
         passeio = consPasseio(passeio);
         if(passeio != null){
             listaPasseio.remove(passeio);
-            return null;
-        }
-        else {
-            return passeio;
         }
     }
 
@@ -53,10 +49,6 @@ public class BDVeiculos {
         carga = consCarga(carga);
         if(carga != null) {
             listaCarga.remove(carga);
-            return null;
-        }
-        else {
-            return carga;
         }
     }
 

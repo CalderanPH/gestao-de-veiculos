@@ -5,52 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d979d94-0774-4ff7-8a74-4d521a8729e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ImprimirExcluir.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ImprimirExcluir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/BDVeiculos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/CadPasseio$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/CadPasseio$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/CadPasseio$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/CadPasseio$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/CadPasseio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/Calc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/Carga.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/ConsultarDelete$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/ConsultarDelete$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/ConsultarDelete$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/ConsultarDelete.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/GestaoMain$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/GestaoMain$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/GestaoMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/Leitura.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/Motor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/Passeio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/VeicExistException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/Veiculo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/VeiculosPasseio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/VelocException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BDVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BDVeiculos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CadPasseio.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CadPasseio.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CadPasseio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CadPasseio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Calc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Carga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Carga.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConsultarDelete.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConsultarDelete.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConsultarDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConsultarDelete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GestaoMain.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GestaoMain.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GestaoMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GestaoMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Leitura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Leitura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Motor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Motor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Passeio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Passeio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Teste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VeicExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VeicExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Veiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VeiculosPasseio.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VeiculosPasseio.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VeiculosPasseio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VeiculosPasseio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VelocException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VelocException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/BDVeiculos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/BDVeiculos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/CadPasseio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/CadPasseio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/ConsultarDelete$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/ConsultarDelete$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/ConsultarDelete$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/ConsultarDelete$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/ConsultarDelete$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/ConsultarDelete$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/ConsultarDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/ConsultarDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/GestaoMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/GestaoMain$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/GestaoMain$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/GestaoMain$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/GestaoMain$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/GestaoMain$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/GestaoMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/GestaoMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/ImprimirExcluir$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/ImprimirExcluir$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/ImprimirExcluir$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/ImprimirExcluir$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/ImprimirExcluir$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/ImprimirExcluir$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/ImprimirExcluir.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/ImprimirExcluir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atividade1/main/java/VeiculosPasseio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BDVeiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BDVeiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CadPasseio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CadPasseio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConsultarDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConsultarDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GestaoMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GestaoMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImprimirExcluir.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImprimirExcluir.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImprimirExcluir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImprimirExcluir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VeiculosPasseio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VeiculosPasseio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,9 +67,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="293" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/src" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
