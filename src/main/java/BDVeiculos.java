@@ -1,4 +1,4 @@
-package main.java;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,24 +52,27 @@ public class BDVeiculos {
         }
     }
 
-
+    public Passeio cadPasseio (Passeio passeio) throws VeicExistException {
+        if (consPasseio(passeio) == null){
+            listaPasseio.add(passeio);
+            return passeio;
+        }
+        else throw new VeicExistException();
+    }
 
     public Passeio consPasseio(Passeio passeio) {
-       try {
-           for (int i = 0; i < listaPasseio.size(); i++) {
-               if (passeio.getPlaca().equalsIgnoreCase(listaPasseio.get(i).getPlaca())){
-                    return listaPasseio.get(i);
-               }
-           }
-       }catch (NullPointerException n){
-
-       }return null;
+        for (int i = 0; i < listaPasseio.size(); i++) {
+            if (passeio.getPlaca() == listaPasseio.get(i).getPlaca()) {
+                return listaPasseio.get(i);
+            }
+        }
+        return null;
     }
 
     public Carga consCarga(Carga carga){
         try {
             for (int i = 0; i < listaCarga.size(); i++) {
-                if (carga.getPlaca().equalsIgnoreCase(listaCarga.get(i).getPlaca())) {
+                if (carga.getPlaca() == listaCarga.get(i).getPlaca()) {
                     return listaCarga.get(i);
                 }
             }
@@ -79,13 +82,7 @@ public class BDVeiculos {
     }
 
 
-    public Passeio cadPasseio (Passeio passeio) throws VeicExistException {
-        if (consPasseio(passeio) == null){
-            listaPasseio.add(passeio);
-             return passeio;
-         }
-         else throw new VeicExistException();
-    }
+
 
 
     public Carga cadCarga(Carga carga) throws VeicExistException{
@@ -94,7 +91,7 @@ public class BDVeiculos {
         carga.setCor(l.entDados("Informe a cor do Veículo...: "));
         carga.setMarca(l.entDados("Informe a Marca do Veiculo...: "));
         carga.setQtdRodas(Integer.parseInt(l.entDados("Informe a quantidade de rodas...:")));
-        carga.setPlaca(l.entDados("Informe a Placa do Veículo...: "));
+        carga.setPlaca(Integer.parseInt(l.entDados("Informe a Placa do Veículo...: ")));
         carga.getMotor().setQtdPist(Integer.parseInt(l.entDados("Informe a quantidade de pistões...: ")));
         carga.getMotor().setPontencia(Integer.parseInt(l.entDados("Informe a potencia do veículo...: ")));
         carga.setTara(Integer.parseInt(l.entDados("Informe a Tara do veículo...:")));

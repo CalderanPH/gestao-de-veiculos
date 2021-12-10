@@ -1,4 +1,4 @@
-package main.java;
+
 
 public final class Carga extends Veiculo implements Calc {
     private int cargaMax;

@@ -1,9 +1,7 @@
-package main.java;
 
-import java.lang.Throwable;
 
 public abstract class Veiculo {
-        private String placa;
+        private int placa;
         private String marca;
         private String modelo;
         private String cor;
@@ -13,7 +11,7 @@ public abstract class Veiculo {
 
 
         public Veiculo() {
-                        this.placa = "";
+                        this.placa = 0;
                         this.marca = "";
                         this.modelo = "";
                         this.cor = "";
@@ -23,10 +21,10 @@ public abstract class Veiculo {
                                 this.motor = motor;
         }
 
-        public String getPlaca() {
+        public int getPlaca() {
                 return placa;
         }
-        final public void setPlaca(String placa) {
+        final public void setPlaca(int placa) {
                 this.placa = placa;
         }
 

@@ -1,4 +1,4 @@
-package main.java;
+
 
 public final class Passeio extends Veiculo implements Calc{
     private int qtdPassageiros;
@@ -25,7 +25,6 @@ public final class Passeio extends Veiculo implements Calc{
     public int calcular(){
         int somaLetras = 0;
 
-        somaLetras += getPlaca().length();
         somaLetras += getMarca().length();
         somaLetras += getModelo().length();
         somaLetras += getCor().length();

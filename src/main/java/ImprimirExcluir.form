@@ -14,29 +14,9 @@
     </clientProperties>
     <border type="none"/>
     <children>
-      <scrollpane id="225ed" binding="scrollPane1">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="1.0" weighty="1.0"/>
-        </constraints>
-        <properties>
-          <background color="-13684945"/>
-          <foreground color="-1"/>
-        </properties>
-        <border type="none"/>
-        <children>
-          <component id="934b1" class="javax.swing.JTable" binding="table1" default-binding="true">
-            <constraints/>
-            <properties>
-              <autoResizeMode value="4"/>
-              <dropMode value="INSERT_ROWS"/>
-            </properties>
-          </component>
-        </children>
-      </scrollpane>
       <component id="41250" class="javax.swing.JButton" binding="btImprimir">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -46,7 +26,7 @@
       </component>
       <component id="a16dc" class="javax.swing.JButton" binding="btSair">
         <constraints>
-          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -56,7 +36,7 @@
       </component>
       <component id="92e8e" class="javax.swing.JButton" binding="btExcluir">
         <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -66,7 +46,7 @@
       </component>
       <component id="9070d" class="javax.swing.JList" binding="list1" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
           <gridbag weightx="1.0" weighty="0.0"/>
@@ -79,7 +59,7 @@
       </component>
       <component id="77dc8" class="javax.swing.JComboBox" binding="cbBox">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties/>
