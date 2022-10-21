@@ -1,12 +1,10 @@
-import java.lang.Exception;
+public class VelocidadeException extends Exception {
 
-public class VelocException extends Exception {
-
-    public VelocException(){
+    public VelocidadeException() {
         System.out.println("A velocidade máxima está fora dos limites brasileiros");
     }
 
-    public String erroVeloc(){
+    public String erroVeloc() {
         return "A velocidade deve ser entre 80km/h à 110km/h";
     }
 }

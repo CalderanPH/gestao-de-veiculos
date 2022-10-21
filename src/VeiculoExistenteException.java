@@ -1,11 +1,10 @@
-import java.lang.Exception;
+public class VeiculoExistenteException extends Exception {
 
-public class VeicExistException extends Exception {
-
-    public VeicExistException(){
+    public VeiculoExistenteException() {
         System.out.println("\nVeiculo já existente! ");
     }
-    public String erroVeiculo(){
+
+    public String erroVeiculo() {
         return "\n Cadastro não realizado. \nJá tem um cadastrado com a mesma placa!";
     }
 

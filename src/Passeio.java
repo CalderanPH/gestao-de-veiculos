@@ -1,33 +1,33 @@
-public final class Passeio extends Veiculo implements Calc{
-    private int qtdPassageiros;
+public final class Passeio extends Veiculo implements Calcular {
 
-    Passeio(){
-        this.qtdPassageiros = 0;
+    private int quantidadePassageiros;
+
+    Passeio() {
+        this.quantidadePassageiros = 0;
     }
 
-    public int getQtdPassageiros(){
-        return qtdPassageiros;
+    public void calcularVelocidade() {
+        float x = (getVelocidadeMaxima() * 1000);
+        System.out.println("\n Velocidade do veículo de passeio: " + x + "m/h");
     }
 
-    public void setQtdPassageiros(int qtdPassageiros){
-        this.qtdPassageiros =  qtdPassageiros;
+    public int calcular() {
+        int somarLetras = 0;
+
+        somarLetras += getPlaca().length();
+        somarLetras += getMarca().length();
+        somarLetras += getModelo().length();
+        somarLetras += getCor().length();
+
+        return somarLetras;
     }
 
-
-
-    public void calcVel() {
-       float x = (getVelocMax()*1000);
-        System.out.println("\n Velocidade do veículo de passeio: "+ x + "m/h");
+    public int getQuantidadePassageiros() {
+        return quantidadePassageiros;
     }
 
-    public int calcular(){
-        int somaLetras = 0;
-
-        somaLetras += getPlaca().length();
-        somaLetras += getMarca().length();
-        somaLetras += getModelo().length();
-        somaLetras += getCor().length();
-
-        return somaLetras;
+    public void setQuantidadePassageiros(int qtdPassageiros) {
+        this.quantidadePassageiros = qtdPassageiros;
     }
+
 }
