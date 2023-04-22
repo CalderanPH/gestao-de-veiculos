@@ -15,16 +15,15 @@ public abstract class Veiculo {
         this.cor = "";
         this.velocidadeMaxima = 0;
         this.quandidadeRodas = 0;
-        Motor motor = new Motor();
-        this.motor = motor;
+        this.motor = new Motor();
     }
 
     public abstract void calcularVelocidade();
 
     final public void setVelocidadeMaxima(float velocidadeMaxima) throws VelocidadeException {
-        float velMax = 110.0f;
-        float velMin = 80.0f;
-        if (velocidadeMaxima >= velMin && velocidadeMaxima <= velMax) {
+        float velocidadeMax = 110.0f;
+        float velocidadeMin = 80.0f;
+        if (velocidadeMaxima >= velocidadeMin && velocidadeMaxima <= velocidadeMax) {
             this.velocidadeMaxima = velocidadeMaxima;
         } else throw new VelocidadeException();
     }
@@ -74,8 +73,8 @@ public abstract class Veiculo {
         return quandidadeRodas;
     }
 
-    final public void setQuantidadeRodas(int qtdRodas) {
-        this.quandidadeRodas = qtdRodas;
+    final public void setQuantidadeRodas(int quantidadeRodas) {
+        this.quandidadeRodas = quantidadeRodas;
     }
 
 }

@@ -9,8 +9,8 @@ public final class Carga extends Veiculo implements Calcular {
     }
 
     public void calcularVelocidade() {
-        float x = (getVelocidadeMaxima() * 10000);
-        System.out.println("\n Velocidade do veículo de Carga: " + x + "cm/h");
+        float velocidade = (getVelocidadeMaxima() * 10000);
+        System.out.println("\n Velocidade do veículo de Carga: " + velocidade + "cm/h");
     }
 
     public int calcular() {

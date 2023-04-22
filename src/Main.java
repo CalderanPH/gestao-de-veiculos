@@ -5,10 +5,10 @@ public class Main {
     private static final BDVeiculos bdVeiculos = new BDVeiculos();
     private static final Leitura leitura = new Leitura();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         boolean continua = true;
-        int opcao = 0;
+        int opcao;
 
         while (continua) {
             System.out.println("\n ===================SISTEM DE GESTÃO DE VEÍCULOS - MENU PRINCIPAL ================\n");
@@ -30,7 +30,6 @@ public class Main {
             } catch (NumberFormatException nfe) {
                 System.out.println("Deve ser um número inteiro - PRESS -> ENTER <- para recomeçar");
                 leitura.entradaDados("");
-
                 continue;
             }
 
@@ -38,40 +37,36 @@ public class Main {
                 //Cadastrar Veículo de Passeio
                 case 1:
                     try {
-                        passeio = new Passeio();
                         passeio = bdVeiculos.cadastroPasseio(passeio);
                         if (passeio != null) {
                             leitura.entradaDados("Veículo cadastrado com sucesso - PRESS -> ENTER <-");
                         } else {
-                            leitura.entradaDados("Já existe um veículo com está placa - PRESS -> ENTER <-");
-                            break;
+                            throw new VeiculoExistenteException();
                         }
                     } catch (NumberFormatException nfe1) {
                         leitura.entradaDados("\n A quantidade de passageiros deve ser um número inteiro! \n Tente novamente!");
-                    } catch (NullPointerException n) {
-                        System.out.println("Erro inesperado tente novamente!");
                     } catch (VeiculoExistenteException vee) {
                         leitura.entradaDados(vee.erroVeiculo() + "- PRESS - -> ENTER <- para recomeçar!");
+                    } catch (Exception e) {
+                        System.out.println("Erro inesperado tente novamente!");
                     }
                     break;
                 //Cadastrar Veículo de Carga
                 case 2:
                     try {
-                        carga = new Carga();
                         carga = bdVeiculos.cadastroCarga(carga);
                         if (passeio != null) {
                             leitura.entradaDados("Veículo cadastrado com sucesso - PRESS -> ENTER <-");
                         } else {
-                            leitura.entradaDados("Já existe um veículo com está placa - PRESS -> ENTER <-");
-                            break;
+                            throw new VeiculoExistenteException();
                         }
-                    } catch (NullPointerException n) {
-                        System.out.println("Erro inesperado tente novamente!");
                     } catch (VeiculoExistenteException vee) {
-                        System.out.println(vee.erroVeiculo() + "- PRESS - -> ENTER <- para recomeçar!");
+                        leitura.entradaDados(vee.erroVeiculo() + "- PRESS - -> ENTER <- para recomeçar!");
+                    } catch (Exception e) {
+                        System.out.println("Erro inesperado tente novamente!");
                     }
                     break;
-                //impressão-PASSEIO
+                //Imprime Passeio
                 case 3:
                     System.out.println("\n Passeio - Impressão de todos veiculos");
                     for (int i = 0; i < bdVeiculos.getListaPasseio().size(); i++) {
@@ -109,6 +104,7 @@ public class Main {
                                 existePlacaPasseio = true;
                             }
                         } catch (NullPointerException npe) {
+                            npe.printStackTrace();
                         }
                     }
                     if (!existePlacaPasseio) {
@@ -129,6 +125,7 @@ public class Main {
                                 existePlacaCarga = true;
                             }
                         } catch (NullPointerException npe) {
+                            npe.printStackTrace();
                         }
                     }
                     if (!existePlacaCarga) {

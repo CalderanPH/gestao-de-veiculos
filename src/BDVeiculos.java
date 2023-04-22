@@ -5,7 +5,6 @@ public class BDVeiculos {
 
     private final List<Passeio> listaPasseio = new ArrayList<>();
     private final List<Carga> listaCarga = new ArrayList<>();
-
     private final Leitura leitura = new Leitura();
 
     public BDVeiculos() {
@@ -28,29 +27,17 @@ public class BDVeiculos {
     }
 
     public Passeio consultaPasseio(Passeio passeio) {
-        try {
-            for (int i = 0; i < listaPasseio.size(); i++) {
-                if (passeio.getPlaca().equalsIgnoreCase(listaPasseio.get(i).getPlaca())) {
-                    return listaPasseio.get(i);
-                }
-            }
-        } catch (NullPointerException n) {
-
-        }
-        return null;
+        return listaPasseio.stream()
+                .filter(p -> p.getPlaca().equalsIgnoreCase(passeio.getPlaca()))
+                .findFirst()
+                .orElse(null);
     }
 
     public Carga consultaCarga(Carga carga) {
-        try {
-            for (int i = 0; i < listaCarga.size(); i++) {
-                if (carga.getPlaca().equalsIgnoreCase(listaCarga.get(i).getPlaca())) {
-                    return listaCarga.get(i);
-                }
-            }
-        } catch (NullPointerException ne) {
-
-        }
-        return null;
+        return listaCarga.stream()
+                .filter(c -> c.getPlaca().equalsIgnoreCase(carga.getPlaca()))
+                .findFirst()
+                .orElse(null);
     }
 
     public Passeio cadastroPasseio(Passeio passeio) throws VeiculoExistenteException {
@@ -89,7 +76,9 @@ public class BDVeiculos {
         try {
             carga.setVelocidadeMaxima(Integer.parseInt(leitura.entradaDados("Informe a velocidade máxima...:")));
         } catch (VelocidadeException v) {
+            System.out.println(v.erroVeloc());
         }
+
         if (consultaCarga(carga) == null) {
             listaCarga.add(carga);
             return carga;

@@ -10,14 +10,14 @@ public class Leitura {
         InputStreamReader teclado = new InputStreamReader(System.in);
         BufferedReader buff = new BufferedReader(teclado);
 
-        String ret = "";
+        String retorno = "";
 
         try {
-            ret = buff.readLine();
-        } catch (IOException ioe) {
+            retorno = buff.readLine();
+        } catch (IOException e) {
             System.out.println("\n Erro de Sistema");
         }
-        return ret;
+        return retorno;
     }
 
 }
