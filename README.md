@@ -1,10 +1,6 @@
-# SISTEM DE GESTÃO DE VEÍCULOS
- É um trabalho que desenvolvi na pós graduação, aplicando os recursos básicos de JAVA.
- 
- O intuito do trabalho é desenvolver uma aplicação com iteração via terminal, onde não foi criado banco de dados propositalmente. 
-A funcionalidade do sistema se da em registrar duas classes de veiculos sendo passeio e de carga. Compatilhando de atributes e tendo suas particularidades. A inteção é utilizar-se de herança e de implementação.
- 
- Próxima atualização vai conter a interface GUI, ficando mais fácil a interação do usuário ao sistema. 
+# GESTÃO DE VEÍCULOS
+Durante meu curso de pós-graduação, desenvolvi um projeto que utilizou recursos básicos de programação em Java e orientação a objetos. A aplicação criada tem como objetivo registrar dois tipos de veículos - passeio e carga - sem a necessidade de um banco de dados. Cada classe compartilha atributos e possui particularidades únicas, que são implementadas por meio de herança. Inicialmente, a interação com o sistema é feita por meio de um terminal.
 
-Confira a atualização no seguinte link:
-https://github.com/CalderanPH/interface-gui
+A próxima atualização do projeto incluirá uma interface gráfica do usuário (GUI), o que tornará a interação com o sistema mais fácil e intuitiva.
+
+Para conferir essa atualização, acesse o seguinte link: https://github.com/CalderanPH/interface-gui
